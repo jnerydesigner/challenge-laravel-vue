@@ -70,7 +70,6 @@ sudo docker-compose up -d nginx mysql phpmyadmin
 
 ```
 sudo docker-compose exec --user=laradock workspace bash
-
 ```
 
 7 - Antes de rodar as migrations, crie o banco de dados
@@ -83,5 +82,6 @@ laravel_challenge
 
 ```
 php artisan migrate
-
 ```
+
+Obs: Não deu tempo de implementar o inertia, para uma aplicação mais reativa, vontade eu tenho, não tem validação ainda, será obrigado a marcar uma opção, o Fast Reload não funcionou.
