@@ -85,3 +85,7 @@ php artisan migrate
 ```
 
 Obs: Não deu tempo de implementar o inertia, para uma aplicação mais reativa, vontade eu tenho, não tem validação ainda, será obrigado a marcar uma opção, o Fast Reload não funcionou.
+
+#### Linkedin
+
+See [Jander Nery](https://www.linkedin.com/in/jander-nery)
