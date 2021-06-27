@@ -14,7 +14,9 @@ class TransactionController extends Controller
 {
     public function index()
     {
-        $transactions = Transaction::all();
+        $transactions = Transaction::select("*")
+                                    ->orderBy('created_at', 'desc')
+                                    ->get();
 
         return $transactions->toArray();
     }
