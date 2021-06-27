@@ -1,0 +1,93 @@
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-sans-serif: 'Nunito', sans-serif;
+$font-size-base: 0.9rem;
+$line-height-base: 1.6;
+
+// Colors
+$blue:    #007bff !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+$indigo:  #6c5ce7 !default;
+$eletric_blue: rgba(9, 132, 227,1.0);
+$american_river:#636e72 !default;
+$orange_view: rgba(225, 112, 85,0.1);
+$green_flat: rgba(85, 239, 196,0.1);
+
+$size-icons: 30px;
+$size-icons-mini: 20px;
+$font-size-list: 16px;
+
+.list-group-item {
+    padding: 0.75rem 0.90rem 0.60rem !important;
+}
+.bg-orange-view{
+    background-color: $orange_view;
+}
+.bg-eletric-blue{
+    background-color: $eletric_blue;
+    color: $body-bg;
+    border: 2px solid $body-bg;
+    .card-subtitle{
+        color: $body-bg !important;
+    }
+    i{
+        color: $body-bg !important;
+    }
+}
+.bg-green-flat{
+    background-color: $green_flat;
+}
+
+.bg-violet{
+    background-color: $indigo !important;
+}
+.bg-american-river{
+    background-color: $american_river !important;
+    color: $body-bg !important;
+}
+
+.income{
+    i{
+        font-size: $size-icons;
+        color: $green;
+    }
+}
+.outcome{
+    i{
+        font-size: $size-icons;
+        color: $red;
+    }
+}
+.sold{
+    i{
+        font-size: $size-icons;
+        color: $blue;
+    }
+}
+
+.income-icon-group{
+    color: $blue;
+    font-size: $font-size-list;
+    i{
+        font-size: $size-icons-mini;
+        color: $green;
+    }
+}
+
+.outcome-icon-group{
+    font-size: $font-size-list;
+    color: $red;
+    i{
+        font-size: $size-icons-mini;
+        color: $red;
+    }
+}
