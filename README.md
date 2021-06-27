@@ -1,70 +1,86 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
 ## About this Project
+
+1 - Clone o Projeto challenge-laravel-vue
+
+```
+git clone https://github.com/jnerydesigner/challenge-laravel-vue.git
+```
+
+2 - Instale as dependências do Vue Js
+
+```
+npm install
+```
+
+3 - Clone o repositório do Laradock para fazer o desenvolvimento com Docker, lebrando que é na pasta do projeto.
+
+```
+git clone https://github.com/laradock/laradock.git
+```
+
+4 - Altere as configurações conforme a aplicação pede
+NGINX
+
+```
+NGINX_HOST_HTTP_PORT=8800
+NGINX_HOST_HTTPS_PORT=543
+NGINX_HOST_LOG_PATH=./logs/nginx/
+NGINX_SITES_PATH=./nginx/sites/
+NGINX_PHP_UPSTREAM_CONTAINER=php-fpm
+NGINX_PHP_UPSTREAM_PORT=9000
+NGINX_SSL_PATH=./nginx/ssl/
+```
+
+MYSQL
+
+```
+MYSQL_VERSION=latest
+MYSQL_DATABASE=default
+MYSQL_USER=docker
+MYSQL_PASSWORD=docker
+MYSQL_PORT=8306
+MYSQL_ROOT_PASSWORD=root
+MYSQL_ENTRYPOINT_INITDB=./mysql/docker-entrypoint-initdb.d
+```
+
+PHP MY ADMIN
+
+```
+PMA_USER=default
+PMA_PASSWORD=secret
+PMA_ROOT_PASSWORD=secret
+PMA_PORT=9080
+PMA_MAX_EXECUTION_TIME=600
+PMA_MEMORY_LIMIT=256M
+PMA_UPLOAD_LIMIT=2G
+```
+
+5 - Rode o comando para deixar o ambiente em docker funcionando, use o sudo se estiver no mac ou linux
+
+```
+Windows
+docker-compose up -d nginx mysql phpmyadmin
+
+Mac ou Linux
+sudo docker-compose up -d nginx mysql phpmyadmin
+```
+
+6 - Entre no workspace com o comando abaixo
 
 ```
 sudo docker-compose exec --user=laradock workspace bash
 
 ```
 
-## About Laravel
+7 - Antes de rodar as migrations, crie o banco de dados
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+```
+laravel_challenge
+```
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+8 - Rode as Migrations
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+```
+php artisan migrate
 
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
--   **[Vehikl](https://vehikl.com/)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Cubet Techno Labs](https://cubettech.com)**
--   **[Cyber-Duck](https://cyber-duck.co.uk)**
--   **[Many](https://www.many.co.uk)**
--   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
--   **[DevSquad](https://devsquad.com)**
--   **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# challenge-laravel-vue
-# challenge-laravel-vue
+```

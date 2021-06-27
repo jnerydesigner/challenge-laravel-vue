@@ -81,6 +81,8 @@ export default {
           };
         })
         .catch(error => console.log(error, "Aqui"));
+
+      this.$emit("reload-list", "getTransaction");
     }
   }
 };

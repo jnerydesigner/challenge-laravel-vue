@@ -22,6 +22,19 @@ export default {
       transactions: []
     };
   },
+  watch: {
+    getTransaction() {
+      axios
+        .get("http://localhost:8800/api/transactions")
+        .then(response => {
+          this.transactions = response.data;
+        })
+        .catch(error => console.log(error))
+        .then(() => {
+          //
+        });
+    }
+  },
   mounted() {
     this.getTransactions();
   },

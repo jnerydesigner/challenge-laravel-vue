@@ -2092,6 +2092,18 @@ __webpack_require__.r(__webpack_exports__);
       transactions: []
     };
   },
+  watch: {
+    getTransaction: function getTransaction() {
+      var _this = this;
+
+      axios.get("http://localhost:8800/api/transactions").then(function (response) {
+        _this.transactions = response.data;
+      })["catch"](function (error) {
+        return console.log(error);
+      }).then(function () {//
+      });
+    }
+  },
   mounted: function mounted() {
     this.getTransactions();
   },
@@ -2111,10 +2123,10 @@ __webpack_require__.r(__webpack_exports__);
       }
     },
     getTransactions: function getTransactions() {
-      var _this = this;
+      var _this2 = this;
 
       axios.get("http://localhost:8800/api/transactions").then(function (response) {
-        _this.transactions = response.data;
+        _this2.transactions = response.data;
       })["catch"](function (error) {
         return console.log(error);
       }).then(function () {//
@@ -2217,6 +2229,7 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         return console.log(error, "Aqui");
       });
+      this.$emit("reload-list", "getTransaction");
     }
   }
 });
