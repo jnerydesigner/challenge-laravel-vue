@@ -19,6 +19,7 @@ git clone https://github.com/laradock/laradock.git
 ```
 
 4 - Altere as configurações conforme a aplicação pede
+
 NGINX
 
 ```
