@@ -86,7 +86,7 @@ laravel_challenge
 php artisan migrate
 ```
 
-Obs: Não deu tempo de implementar o inertia, para uma aplicação mais reativa, vontade eu tenho, não tem validação ainda, será obrigado a marcar uma opção, o Fast Reload não funcionou.
+Obs: Não deu tempo de implementar o inertia, para uma aplicação mais reativa, vontade eu tenho, não tem validação ainda, será obrigado a marcar uma opção, o Fast Reload não funcionou, por isso a necessidade de dá um F5 na página, se eu tivesse um pouco mais de tempo, implementaria o gerenciamento de estado com Vuex.
 
 #### Linkedin
 
